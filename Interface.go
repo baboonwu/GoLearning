@@ -17,7 +17,7 @@
 interface类型定义了一组方法，如果某个对象实现了某个接口的所有方法，
 则此对象就实现了此接口，不需要显示声明。*/
 
-package main
+package GoLearning
 
 import (
 	"fmt"
@@ -72,36 +72,11 @@ func (tv TVConnector) Connect() {
 	fmt.Println("Connect:", tv.name)
 }
 
-func main() {
-	/*a := PhoneConnector{"PhoneConnector"}
-	a.Connect()
-	Disconnect(a)*/
-
-	/*pc := PhoneConnector{"PhoneConnector"}
-	var a Connector
-	a = Connector(pc)
-	a.Connect()
-	Disconnect(a)*/
+func main_Inter() {
 
 	/*tv := TVConnector("TVConnector")
 	var a USB
 	a = USB(tv) //cannot convert tv (type TVConnector) to type USB:
 	//TVConnector does not implement USB (missing Name method)
 	a.Connect()*/
-
-	/*5.将对象赋值给接口时，会发生拷贝，而接口内部存储的是指向这个
-	复制品的指针，既无法修改复制品的状态，也无法获取指针*/
-	/*pc := PhoneConnector{"PhoneConnector"}
-	var a Connector
-	a = Connector(pc)
-	a.Connect()
-	pc.name = "pc"
-	a.Connect()*/
-
-	//6.只有当接口存储的类型和对象都为nil时，接口才等于nil
-	var e interface{}
-	fmt.Println(e == nil) //true
-	var p *int = nil
-	e = p
-	fmt.Println(e == nil) //false
 }
