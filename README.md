@@ -1,4 +1,17 @@
 ﻿# GoLearning
-GOLANG 学习资料
+GoLang Learning
 
-this is for test！
+##install
+
+```
+go get github.com/baboonwu/GoLearning
+```
+or
+```
+go get github.com/lijin1212/GoLearning
+```
+
+##test
+```
+go test
+```
